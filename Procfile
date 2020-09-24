@@ -1,1 +1,1 @@
-web: gunicorn sazuu.wsgi
+web: gunicorn sazuu.sazuu.wsgi
