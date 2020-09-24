@@ -1,1 +1,1 @@
-web: gunicorn sazuu.sazuu.wsgi
+web: gunicorn --pythonpath sazuu sazuu.wsgi
