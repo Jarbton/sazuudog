@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainsite'
+    'mainsite',
+    'links'
 ]
 
 MIDDLEWARE = [
@@ -125,7 +126,7 @@ STATICFILES_DIRS = [
         os.path.join(BASE_DIR, "static"),
     ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-# STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage' 
+STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage' 
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())

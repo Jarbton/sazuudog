@@ -1,0 +1,38 @@
+<!-- GeoData base.html -->
+{% extends 'base-bootstrap.html' %}
+
+{% block title %}Sazuu's Links!{% endblock %}
+
+{% block content %}
+
+    <div class="row" style="padding-top: 50px">
+        <div class="col text-center">
+            <h3>Sazuu's Links &#128150;</h3>
+            {% if link_list %}
+                {% for link in link_list %}
+                    {% if link.display %}
+                        <div class="row">
+                            <a href="{{ link.url }}" class="custom-card">
+                                <div class="card" style="width: 15rem; display: inline-block; margin-top: 10px">
+                                    <div class="card-body">
+                                        <h5 class="card-title">&#{{ link.icon }}; {{ link.service }}</h5>
+                                        <p class="card-text">{{ link.username }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p>No links available &#128532;</p>
+            {% endif %}
+        </div>
+    </div>
+    <style>
+        a.custom-card,
+        a.custom-card:hover {
+        color: inherit;
+        }
+    </style>
+
+{% endblock %}
