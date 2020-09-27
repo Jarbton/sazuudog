@@ -26,6 +26,7 @@ class Link(TimeStampedModel):
     username = models.CharField(default="@SazuuDog", max_length=300, help_text="Username on this service.")
     icon = models.CharField(max_length=30, default=NO_LOGO, choices=LOGOS, help_text='Emoji logo for this service.')
     display = models.BooleanField(default=False, help_text="Indicate if link should be displayed.")
+    sort_order = models.IntegerField(default=0, help_text="Used to order the links")
 
     #https://stackoverflow.com/questions/49554070/using-bootstrap-cards-as-a-hyperlink
 
