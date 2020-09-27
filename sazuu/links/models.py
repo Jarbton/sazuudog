@@ -10,10 +10,11 @@ INSTAGRAM = '128248'
 TIKTOK = '127925'
 TWITCH = '128250'
 TWITTER = '128036'
+DISCORD = '127918'
 
 LOGOS = (
     ((NO_LOGO, 'No Logo'), (INSTAGRAM, 'Instagram'), (TIKTOK, 'TikTok'), 
-    (TWITCH, 'Twitch'), (TWITTER, 'Twitter'))
+    (TWITCH, 'Twitch'), (TWITTER, 'Twitter'), (DISCORD, 'Discord'))
 )
 
 class Link(TimeStampedModel):
