@@ -1,17 +1,30 @@
-{% extends "base.html" %}
+{% extends "base-bootstrap.html" %}
 
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="row text-center" style="margin-top: 20px;">
-        <div class="col">
-            <h2>Server Status</h2>
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>SazuuDog</h1>
+            <p class="lead text-muted">{{ about_me }}</p>
+        </div>
+    </section>
+
+    <!-- <div class="album py-5 bg-light">
+        <div class="container">
             <div class="row">
-                <a href="https://www.gametracker.com/server_info/185.38.148.172:27105/" target="_blank"><img src="https://cache.gametracker.com/server_info/185.38.148.172:27105/b_350_20_ffd1dc_d1fff4_000000_000000.png" border="0" width="350" height="20" alt=""/></a>
-            </div>
-            <div class="row">
-                <a href="https://www.gametracker.com/server_info/195.206.181.20:25596/" target="_blank"><img src="https://cache.gametracker.com/server_info/195.206.181.20:25596/b_350_20_ffd1dc_d1fff4_000000_111111.png" border="0" width="350" height="20" alt=""/></a>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </div> -->
+</main>
 {% endblock %}

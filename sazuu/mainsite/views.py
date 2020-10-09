@@ -6,6 +6,7 @@ class HomeView(View):
 
     def get(self, request):
         context = {'title': 'SazuuDog - Home'}
+        context['about_me'] = "Born and raised in South Detroit."
         return render(request, self.template_name, context)
 
 
