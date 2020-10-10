@@ -13,7 +13,7 @@
                         {% for link in link_list %}
                             {% if link.display %}
                                 <div class="row">
-                                    <a href="{{ link.url }}" class="custom-card">
+                                    <a href="{% url 'redirect_link' link.id %}" class="custom-card">
                                         <div class="card" style="width: 15rem; display: inline-block; margin-top: 15px">
                                             <div class="card-body">
                                                 <h5 class="card-title">&#{{ link.icon }}; {{ link.service }}</h5>

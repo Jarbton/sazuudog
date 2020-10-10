@@ -28,7 +28,12 @@ class Link(TimeStampedModel):
     display = models.BooleanField(default=False, help_text="Indicate if link should be displayed.")
     sort_order = models.IntegerField(default=0, help_text="Used to order the links")
 
-    #https://stackoverflow.com/questions/49554070/using-bootstrap-cards-as-a-hyperlink
-
     def __str__(self):
         return self.service
+
+
+class Click(TimeStampedModel):
+    """
+    Click object references a link to track when a link has been clicked.
+    """
+    link = models.ForeignKey(Link, on_delete=models.CASCADE, related_name='clicks', help_text='The link that was clicked')
