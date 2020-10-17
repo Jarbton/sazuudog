@@ -16,7 +16,7 @@
 
     <!-- TODO: Change this to ajax -->
     <script>
-        var timeFormat = 'MM/DD/YYYY HH:mm';
+        var timeFormat = 'MM/DD/YYYY';
         var ctx = document.getElementById('usageChart').getContext('2d');
         var color = Chart.helpers.color;
         var usageChart = new Chart(ctx, {
@@ -41,7 +41,7 @@
 						time: {
 							parser: timeFormat,
 							round: 'day',
-							tooltipFormat: 'll HH:mm'
+							tooltipFormat: 'll'
 						},
 						scaleLabel: {
 							display: true,
@@ -50,8 +50,10 @@
 					}],
 					yAxes: [{
 						scaleLabel: {
+							beginAtZero: true,
 							display: true,
-							labelString: 'value'
+							labelString: 'Clicks',
+							callback: function(value) {if (value % 1 === 0) {return value;}}
 						}
 					}]
 				},

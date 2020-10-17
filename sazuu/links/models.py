@@ -5,16 +5,17 @@ from django.conf import settings
 
 # Emoji references from
 # https://www.w3schools.com/charsets/ref_emoji.asp
-NO_LOGO = '129430'
+NO_LOGO = '129429'
 INSTAGRAM = '128248'
 TIKTOK = '127925'
 TWITCH = '128250'
 TWITTER = '128036'
 DISCORD = '127918'
+FACEBOOK = '128214'
 
 LOGOS = (
     ((NO_LOGO, 'No Logo'), (INSTAGRAM, 'Instagram'), (TIKTOK, 'TikTok'), 
-    (TWITCH, 'Twitch'), (TWITTER, 'Twitter'), (DISCORD, 'Discord'))
+    (TWITCH, 'Twitch'), (TWITTER, 'Twitter'), (DISCORD, 'Discord'), (FACEBOOK, 'Facebook'))
 )
 
 class Link(TimeStampedModel):
